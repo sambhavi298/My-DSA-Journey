@@ -1,0 +1,20 @@
+// ✅ Problem: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+// 📌 Difficulty: Easy
+// 🧠 Approach: Two-pointer technique
+// 🚀 Time Complexity: O(n)
+// 🧵 Space Complexity: O(1)
+
+// 🎯 Notes: First LeetCode problem! Focused on understanding in-place updates and array manipulation.
+
+public class RemoveDuplicatesFromSortedArray {
+    public int removeDuplicates(int[] nums) {
+        int i = 0;
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[j] != nums[i]) {
+                i++;
+                nums[i] = nums[j];
+            }
+        }
+        return i + 1;
+    }
+}
